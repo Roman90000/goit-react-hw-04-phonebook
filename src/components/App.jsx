@@ -39,7 +39,7 @@ export class App extends Component {
     );
 
     if (contact) {
-      alert(`Is already in contacts`);
+      alert(`Is already in contacts `);
       return;
     }
 
