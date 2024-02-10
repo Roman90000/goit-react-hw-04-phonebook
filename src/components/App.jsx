@@ -43,17 +43,19 @@ export const App = () => {
     setFilter(name);
   };
 
-  const getFilteredContacts = () => {
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
-    );
-  };
+  // const getFilteredContacts = () => {
+  //   return contacts.filter(contact =>
+  //     contact.name.toLowerCase().includes(filter.toLowerCase())
+  //   );
+  // };
 
   const deleteContacts = contactId => {
     setContacts(contacts.filter(contact => contact.id !== contactId));
   };
 
-  const visibleContacts = getFilteredContacts();
+  const visibleContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
 
   return (
     <div>
